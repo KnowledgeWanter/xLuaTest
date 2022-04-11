@@ -1,0 +1,20 @@
+print('luacher File.lua')
+
+num1=99
+
+str1='This is lua string.'
+
+t1={
+i=1,
+name='zong',
+age=29,
+123,
+"red",
+"blue",
+"yellow",
+
+mm=function()	
+print('helloworld')
+end
+	
+}
