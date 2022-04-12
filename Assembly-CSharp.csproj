@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\4.CSharpeCallLuaVar\CSharpeCallLuaVarTest.cs" />
     <Compile Include="Assets\Scripts\5.CSharpCallLuaTable\CSharpCallLuaTableTest.cs" />
     <Compile Include="Assets\Scripts\5.CSharpCallLuaTable\CSharpCallLuaTableTest2.cs" />
+    <Compile Include="Assets\Scripts\5.CSharpCallLuaTable\CSharpCallLuaTableTest3.cs" />
     <Compile Include="Assets\Scripts\GlobalHelper.cs" />
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
@@ -179,6 +180,7 @@
     <None Include="Assets\XLua\Gen\link.xml" />
     <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
     <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
+    <None Include="Assets\Doc\备注.txt" />
     <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
     <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
     <None Include="Assets\XLua\Resources\perf\memory.lua.txt" />
