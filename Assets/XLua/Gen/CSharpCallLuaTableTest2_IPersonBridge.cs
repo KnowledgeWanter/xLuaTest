@@ -63,6 +63,82 @@ namespace XLua.CSObjectWrap
 #endif
 		}
         
+		void CSharpCallLuaTableTest2.IPerson.f1()
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+				RealStatePtr L = luaEnv.L;
+				int err_func = LuaAPI.load_error_func(L, luaEnv.errorFuncRef);
+				
+				
+				LuaAPI.lua_getref(L, luaReference);
+				LuaAPI.xlua_pushasciistring(L, "f1");
+				if (0 != LuaAPI.xlua_pgettable(L, -2))
+				{
+					luaEnv.ThrowExceptionFromError(err_func - 1);
+				}
+				if(!LuaAPI.lua_isfunction(L, -1))
+				{
+					LuaAPI.xlua_pushasciistring(L, "no such function f1");
+					luaEnv.ThrowExceptionFromError(err_func - 1);
+				}
+				LuaAPI.lua_pushvalue(L, -2);
+				LuaAPI.lua_remove(L, -3);
+				
+				int __gen_error = LuaAPI.lua_pcall(L, 1, 0, err_func);
+				if (__gen_error != 0)
+					luaEnv.ThrowExceptionFromError(err_func - 1);
+				
+				
+				
+				LuaAPI.lua_settop(L, err_func - 1);
+				
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		void CSharpCallLuaTableTest2.IPerson.f2(int v1, int v2)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+				RealStatePtr L = luaEnv.L;
+				int err_func = LuaAPI.load_error_func(L, luaEnv.errorFuncRef);
+				
+				
+				LuaAPI.lua_getref(L, luaReference);
+				LuaAPI.xlua_pushasciistring(L, "f2");
+				if (0 != LuaAPI.xlua_pgettable(L, -2))
+				{
+					luaEnv.ThrowExceptionFromError(err_func - 1);
+				}
+				if(!LuaAPI.lua_isfunction(L, -1))
+				{
+					LuaAPI.xlua_pushasciistring(L, "no such function f2");
+					luaEnv.ThrowExceptionFromError(err_func - 1);
+				}
+				LuaAPI.lua_pushvalue(L, -2);
+				LuaAPI.lua_remove(L, -3);
+				LuaAPI.xlua_pushinteger(L, v1);
+				LuaAPI.xlua_pushinteger(L, v2);
+				
+				int __gen_error = LuaAPI.lua_pcall(L, 3, 0, err_func);
+				if (__gen_error != 0)
+					luaEnv.ThrowExceptionFromError(err_func - 1);
+				
+				
+				
+				LuaAPI.lua_settop(L, err_func - 1);
+				
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
 
         
         string CSharpCallLuaTableTest2.IPerson.name 

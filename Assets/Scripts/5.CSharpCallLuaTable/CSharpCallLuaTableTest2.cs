@@ -12,6 +12,8 @@ public class CSharpCallLuaTableTest2 : MonoBehaviour
         Debug.Log("name:" + _iperson.name);
         Debug.Log("age:" + _iperson.age);
         _iperson.mm();
+        _iperson.f1();
+        _iperson.f2(1, 2);
     }
 
     [CSharpCallLua]
@@ -20,5 +22,9 @@ public class CSharpCallLuaTableTest2 : MonoBehaviour
         string name { get; set; }
         int age { get; set; }
         void mm();
+
+        void f1();
+
+        void f2(int v1, int v2);
     }
 }

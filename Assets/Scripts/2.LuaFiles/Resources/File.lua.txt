@@ -18,3 +18,12 @@ print('helloworld')
 end
 	
 }
+
+function t1.f1(self)
+print(self.name,self.age)
+end
+
+function t1:f2(v1,v2)
+print(self.name,self.age)
+print(v1+v2)
+end
