@@ -27,3 +27,12 @@ function t1:f2(v1,v2)
 print(self.name,self.age)
 print(v1+v2)
 end
+
+function f3()
+print('File.lua function:f3')
+end
+
+function f4(v1,v2)
+print(v1+v2)
+return v1+v2
+end
