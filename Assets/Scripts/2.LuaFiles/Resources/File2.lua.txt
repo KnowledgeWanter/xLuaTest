@@ -1,0 +1,6 @@
+print('launch File2.lua');
+
+CS.UnityEngine.Debug.Log("Start");
+
+local go = CS.UnityEngine.GameObject();
+go.name = "Obj_1";
