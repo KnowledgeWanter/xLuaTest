@@ -1,0 +1,7 @@
+print('launch File3.lua')
+
+--销毁Directional Light物体上的Light组件
+local objLight = CS.UnityEngine.GameObject.Find("Directional Light")
+local comLight = objLight:GetComponent("Light")
+CS.UnityEngine.GameObject.Destroy(comLight)
+print('Destroy com_Light')
